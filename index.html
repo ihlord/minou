@@ -668,8 +668,8 @@ create policy "Users see own logs" on logs
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 // ─── CONFIG ────────────────────────────────────────────────────────────────
-let SUPABASE_URL = localStorage.getItem('flora_url') || '';
-let SUPABASE_KEY = localStorage.getItem('flora_key') || '';
+let SUPABASE_URL = 'https://tahacxzvesoedtyufcma.supabase.co';
+let SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRhaGFjeHp2ZXNvZWR0eXVmY21hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE4MTQ5NDksImV4cCI6MjA4NzM5MDk0OX0.EAJN9b8Rkvt_BbJQtd8goixLKaBsxqytXIDLd_8XCZE';
 let sbClient = null;
 let authMode = 'signin';
 let selectedDate = null;
@@ -686,7 +686,7 @@ function init() {
   currentYear = now.getFullYear();
   currentMonth = now.getMonth();
 
-  if (!SUPABASE_URL || !SUPABASE_KEY) {
+  if (false) {
     document.getElementById('config-screen').style.display = 'block';
     return;
   }
